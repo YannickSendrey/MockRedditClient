@@ -7,6 +7,8 @@ export const articleBoardSlice = createSlice({
         id: 1,
         title: 'Mon premier article',
         voteRate: 4,
+        contentImg: 'src/assets/react.svg',
+        contentText: 'j\'adore reddit et les apis yes',
         author: 'Yannick',
         publishDate: '22/07/2023',
         comNumber: Math.floor(Math.random() * 10)
@@ -16,6 +18,8 @@ export const articleBoardSlice = createSlice({
         id: 2,
         title: 'React-redux',
         voteRate: 1402,
+        contentImg: 'src/assets/react.svg',
+        contentText: 'j\'adore react ça c\'est vrai par contre',
         author: 'Meta',
         publishDate: '01/04/2017',
         comNumber: Math.floor(Math.random() * 1000)
@@ -25,13 +29,15 @@ export const articleBoardSlice = createSlice({
         id: 3,
         title: 'TFT cheatsheet',
         voteRate: 567,
+        contentImg: 'src/assets/react.svg',
+        contentText: 'je déteste KARMA',
         author: 'Riot Kassadin',
         publishDate: '25/12/2022',
         comNumber: Math.floor(Math.random() * 500)
       }
     ],
     reducers: {
-        fetchArticle(state, action) {
+        addArticle(state, action) {
             state.push(action.payload);
         },
 
@@ -46,7 +52,9 @@ export const articleBoardSlice = createSlice({
     }
 })
 
-export const selectAllArticles = (state) => state.articleBoardSlice;
+export const selectAllArticles = state => state.articleBoard;
+
+export const { addArticle, incrementVoteRate, decrementVoteRate } = articleBoardSlice.actions;
 
 export default articleBoardSlice.reducer;
 
