@@ -1,7 +1,7 @@
 import React from 'react';
-import { Article } from '../components/Article';
+import { Article } from '../../components/Article';
 import { useSelector } from 'react-redux';
-import { selectAllArticles } from './ArticleBoardSlice';
+import { selectAllArticles } from './articleBoardSlice';
 
 export const ArticleBoard = () => {
     

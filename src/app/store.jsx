@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import articleBoardReducer from '../features/articleBoardSlice';
+import articleBoardReducer from '../features/ArticleBoard/articleBoardSlice';
 
 export default configureStore({
     reducer: {

@@ -8,7 +8,7 @@ export const articleBoardSlice = createSlice({
         title: 'Mon premier article',
         voteRate: 4,
         contentImg: 'src/assets/react.svg',
-        contentText: 'j\'adore reddit et les apis yes',
+        contentText: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim est consectetur doloribus soluta! Omnis sit modi incidunt animi, saepe autem minus repellat sunt quisquam nulla facere quod magnam reiciendis ut blanditiis',
         author: 'Yannick',
         publishDate: '22/07/2023',
         comNumber: Math.floor(Math.random() * 10)
@@ -19,7 +19,7 @@ export const articleBoardSlice = createSlice({
         title: 'React-redux',
         voteRate: 1402,
         contentImg: 'src/assets/react.svg',
-        contentText: 'j\'adore react ça c\'est vrai par contre',
+        contentText: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos nihil ipsa quasi ullam ipsum distinctio voluptates deleniti, libero neque debitis inventore delectus! Perferendis delectus quasi ut rem cupiditate.',
         author: 'Meta',
         publishDate: '01/04/2017',
         comNumber: Math.floor(Math.random() * 1000)
@@ -30,7 +30,7 @@ export const articleBoardSlice = createSlice({
         title: 'TFT cheatsheet',
         voteRate: 567,
         contentImg: 'src/assets/react.svg',
-        contentText: 'je déteste KARMA',
+        contentText: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur totam asperiores molestias, sed ab numquam vero deleniti.',
         author: 'Riot Kassadin',
         publishDate: '25/12/2022',
         comNumber: Math.floor(Math.random() * 500)
