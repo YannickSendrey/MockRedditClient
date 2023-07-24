@@ -4,6 +4,7 @@
 }
 
 body {
-    background-color: rgba(23, 76, 87, 75%);
-    font-family:'Courier New', Courier, monospace;
+    background-color: rgb(21, 32, 43);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
 }

@@ -19,6 +19,8 @@ export const Article = (props) => {
                     <p className={styles.article__moreInfos__author}>posted by <span className={styles.article__moreInfos__author_name}>{author}</span></p>
                     <p>-</p>
                     <p className={styles.article__moreInfos__date}>{publishDate}</p>
+                    <p>-</p>
+                    <p>{comNumber} comments</p>
                 </div>
             </div>
             
