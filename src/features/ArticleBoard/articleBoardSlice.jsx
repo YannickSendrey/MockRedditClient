@@ -38,15 +38,23 @@ export const articleBoardSlice = createSlice({
     ],
     reducers: {
         addArticle(state, action) {
-            state.push(action.payload);
+            state.articleBoard.push(action.payload);
         },
 
-        incrementVoteRate(state, articleId) {
-            state.articleId.voteRate.value ++;
+        incrementVoteRate(state, action) {
+          const { articleId } = action.payload;
+          const article = state.find((article) => article.id === articleId);
+          if (article) {
+            article.voteRate ++;
+          }
         },
 
-        decrementVoteRate(state, articleId) {
-            state.articleId.voteRate.value --;
+        decrementVoteRate(state, action) {
+          const { articleId } = action.payload;
+          const article = state.find((article) => article.id === articleId);
+          if (article) {
+            article.voteRate -= 1;
+          }
         },
 
     }
@@ -54,10 +62,11 @@ export const articleBoardSlice = createSlice({
 
 export const selectAllArticles = state => state.articleBoard;
 
+
 export const { addArticle, incrementVoteRate, decrementVoteRate } = articleBoardSlice.actions;
 
-export default articleBoardSlice.reducer;
 
+export default articleBoardSlice.reducer;
 /*
 [
     {

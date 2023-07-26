@@ -8,6 +8,9 @@ export const ArticleBoard = () => {
     const articles = useSelector(selectAllArticles);
 
 
+    
+
+
     return (
         // foreach article -> un article en gros, tu lui passes toutes ses données en prop ? 
         <>

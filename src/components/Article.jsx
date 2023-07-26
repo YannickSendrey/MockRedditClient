@@ -10,7 +10,7 @@ export const Article = (props) => {
     
     return (
         <section className={styles.article__section}>
-            <VoteRate voteRate={voteRate} />
+            <VoteRate voteRate={voteRate} articleId={id} />
             <div className={styles.article__content}>
                 <h2 className={styles.article__h2}>{title}</h2>
                 <img className={styles.article__contentImg} src={contentImg} alt={alt}/>

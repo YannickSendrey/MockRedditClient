@@ -16,13 +16,13 @@
 }
 
 .voterate__up {
-    transform: rotate(-135deg);
     -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
 }
 
 .voterate__down {
-    transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 
 .voterate__number {
