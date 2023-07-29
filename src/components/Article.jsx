@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { VoteRate } from './VoteRate';
 import styles from '../css/article.module.css'
 import { useSelector } from 'react-redux';
