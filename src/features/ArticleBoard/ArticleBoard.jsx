@@ -16,15 +16,8 @@ export const ArticleBoard = () => {
         <>
             {articles.map((article) => {
                 return <Article
-                         id={article.id} 
-                         title={article.title} 
-                         voteRate={article.voteRate}
-                         contentImg={article.contentImg}
-                         contentText={article.contentText}
-                         author={article.author}
-                         publishDate={article.publishDate}
-                         comNumber={article.comNumber}
-                         key={article.id}
+                         articleId={article.id}
+                         key={article.id} 
                  />
             })} 
         </>

@@ -11,7 +11,11 @@ export const articleBoardSlice = createSlice({
         contentText: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim est consectetur doloribus soluta! Omnis sit modi incidunt animi, saepe autem minus repellat sunt quisquam nulla facere quod magnam reiciendis ut blanditiis',
         author: 'Yannick',
         publishDate: '22/07/2023',
-        comNumber: Math.floor(Math.random() * 10)
+        comNumber: Math.floor(Math.random() * 10),
+        coms: [{
+          content: '',
+          rate: 0
+        }]
       },
 
       {
@@ -22,7 +26,11 @@ export const articleBoardSlice = createSlice({
         contentText: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos nihil ipsa quasi ullam ipsum distinctio voluptates deleniti, libero neque debitis inventore delectus! Perferendis delectus quasi ut rem cupiditate.',
         author: 'Meta',
         publishDate: '01/04/2017',
-        comNumber: Math.floor(Math.random() * 1000)
+        comNumber: Math.floor(Math.random() * 1000),
+        coms: [{
+          content: '',
+          rate: 0
+        }]
       },
 
       {
@@ -33,7 +41,11 @@ export const articleBoardSlice = createSlice({
         contentText: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur totam asperiores molestias, sed ab numquam vero deleniti.',
         author: 'Riot Kassadin',
         publishDate: '25/12/2022',
-        comNumber: Math.floor(Math.random() * 500)
+        comNumber: Math.floor(Math.random() * 500),
+        coms: [{
+          content: '',
+          rate: 0
+        }]
       }
     ],
     reducers: {

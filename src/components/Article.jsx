@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { VoteRate } from './VoteRate';
 import styles from '../css/article.module.css'
+import { useSelector } from 'react-redux';
+import { selectAllArticles} from '../features/ArticleBoard/articleBoardSlice';
 
 
-export const Article = (props) => {
-    const { id, title, voteRate, contentImg, contentText, author, publishDate, comNumber } = props;
+export const Article = ( { articleId }) => {
+    const articles = useSelector(selectAllArticles);
+    const article = articles.find((article) => article.id === articleId);
+    const { voteRate, id, title, contentImg, contentText, author, publishDate, comNumber } = article;
 
     const alt = "Image illustrant l'article suivant : " + title;
     

@@ -9,17 +9,23 @@ export const VoteRate = (props) => {
     const dispatch = useDispatch();
     
     const handleIncrement = () => {
-        if (lastVote !== 'increment') {
+        if (lastVote === null) {
             dispatch(incrementVoteRate({ articleId }));
             setLastVote('increment');
+        } else if (lastVote === 'decrement') {
+            dispatch(incrementVoteRate({ articleId }));
+            setLastVote(null);
         }
        
       };
     
       const handleDecrement = () => {
-        if (lastVote !== 'decrement') {
+        if (lastVote === null) {
             dispatch(decrementVoteRate({ articleId }));
             setLastVote('decrement')
+        } else if (lastVote === 'increment') {
+            dispatch(decrementVoteRate({ articleId }));
+            setLastVote(null)
         }
         
       };
