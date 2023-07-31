@@ -12,16 +12,22 @@ const initialState = [
     comNumber: Math.floor(Math.random() * 10),
     comments: [
       {
+        id: 1,
         content: 'good job',
-        rate: 3
+        voteRate: 3,
+        author: 'nice guy'
       },
       {
+        id: 2,
         content: 'poor article',
-        rate: -6
+        voteRate: -6,
+        author: 'not so nice guy'
       },
       {
+        id: 3,
         content: 'keep going',
-        rate: 2
+        voteRate: 2,
+        author: ':)'
       }
    ]
   },
@@ -37,16 +43,22 @@ const initialState = [
     comNumber: Math.floor(Math.random() * 1000),
     comments: [
       {
+        id: 1,
         content: 'Thank you for this awesome library',
-        rate: 323
+        voteRate: 323,
+        author: 'ReactDevelopper'
       },
       {
+        id: 2,
         content: 'So easy to use I love it',
-        rate: 202
+        voteRate: 202,
+        author: 'IslandDev999'
       },
       {
+        id: 3,
         content: 'Meh I prefer Zustand',
-        rate: 8
+        voteRate: 8,
+        author: 'ZustandCreator'
       }
    ]
   },
@@ -62,16 +74,22 @@ const initialState = [
     comNumber: Math.floor(Math.random() * 500),
     comments: [
       {
+        id: 1,
         content: 'I hate this patch nerf Taric please',
-        rate: 525
+        voteRate: 525,
+        author: 'me but anonymously'
       },
       {
+        id: 2,
         content: 'Love it I can hyper-roll every game',
-        rate: -52
+        voteRate: -52,
+        author: 'anotherYordle'
       },
       {
+        id: 3,
         content: 'yes',
-        rate: 0
+        voteRate: 0,
+        author: 'yes'
       }
    ]
   }
@@ -87,7 +105,7 @@ export const articleBoardSlice = createSlice({
             state.articleBoard.push(action.payload);
         },
 
-        incrementVoteRate(state, action) {
+        incrementArticleVoteRate(state, action) {
           const { articleId } = action.payload;
           const article = state.find((article) => article.id === articleId);
           if (article) {
@@ -95,13 +113,33 @@ export const articleBoardSlice = createSlice({
           }
         },
 
-        decrementVoteRate(state, action) {
+        decrementArticleVoteRate(state, action) {
           const { articleId } = action.payload;
           const article = state.find((article) => article.id === articleId);
           if (article) {
-            article.voteRate -= 1;
+            article.voteRate --;
           }
         },
+
+        incrementCommentVoteRate(state, action) {
+          const { articleId, commentId } = action.payload;
+          const article = state.find((article) => article.id === articleId);
+          if (article) {
+            const comments = article.comment;
+            const comment = comments.find((comment) => comment.id === commentId)
+            comment.voteRate ++;
+          }
+        },
+
+        decrementCommentVoteRate(state, action) {
+          const { articleId, commentId } = action.payload;
+          const article = state.find((article) => article.id === articleId);
+          if (article) {
+            const comments = article.comment;
+            const comment = comments.find((comment) => comment.id === commentId)
+            comment.voteRate --;
+          }
+        }
 
     }
 })
@@ -109,7 +147,7 @@ export const articleBoardSlice = createSlice({
 export const selectAllArticles = state => state.articleBoard;
 
 
-export const { addArticle, incrementVoteRate, decrementVoteRate } = articleBoardSlice.actions;
+export const { addArticle, incrementArticleVoteRate, decrementArticleVoteRate, incrementCommentVoteRate, decrementCommentVoteRate } = articleBoardSlice.actions;
 
 
 export default articleBoardSlice.reducer;

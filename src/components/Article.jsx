@@ -1,5 +1,5 @@
 import React from 'react';
-import { VoteRate } from './VoteRate';
+import { ArticleVoteRate } from './ArticleVoteRate';
 import styles from '../css/article.module.css'
 import { useSelector } from 'react-redux';
 import { selectAllArticles} from '../features/ArticleBoard/articleBoardSlice';
@@ -13,17 +13,17 @@ export const Article = ( { articleId }) => {
 
     const alt = "Image illustrant l'article suivant : " + title;
     const navigate = useNavigate();
-    const routeChange = () =>{ 
+    const goToArticle = () =>{ 
         let path = '/' + id; 
         navigate(path);
       }
 
     return (
         <section className={styles.article__section}>
-            <VoteRate voteRate={voteRate} articleId={id} />
+            <ArticleVoteRate voteRate={voteRate} articleId={id} />
             <div className={styles.article__content}>
-                <h2 onClick={routeChange} className={styles.article__h2}>{title}</h2>
-                <img onClick={routeChange} className={styles.article__contentImg} src={contentImg} alt={alt} />
+                <h2 onClick={goToArticle} className={styles.article__h2}>{title}</h2>
+                <img onClick={goToArticle} className={styles.article__contentImg} src={contentImg} alt={alt} />
                 <p className={styles.article__contentText}>{contentText}</p>
                 <div className={styles.article__moreInfos}>
                     <p className={styles.article__moreInfos__author}>posted by <span className={styles.article__moreInfos__author_name}>{author}</span></p>
