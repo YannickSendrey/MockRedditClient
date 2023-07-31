@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 import styles from '../css/article.module.css';
-import { useDispatch, useSelector } from 'react-redux';
-import { incrementVoteRate, decrementVoteRate, selectAllArticles } from '../features/ArticleBoard/articleBoardSlice';
+import { useDispatch } from 'react-redux';
+import { incrementArticleVoteRate, decrementArticleVoteRate } from '../features/ArticleBoard/articleBoardSlice';
 
-export const VoteRate = (props) => {
+export const ArticleVoteRate = (props) => {
     const { voteRate, articleId } = props;
     const [lastVote, setLastVote] = useState(null); // we want our user to be able to upVote/downVote only once per article
     const dispatch = useDispatch();
     
     const handleIncrement = () => {
         if (lastVote === null) {
-            dispatch(incrementVoteRate({ articleId }));
+            dispatch(incrementArticleVoteRate({ articleId }));
             setLastVote('increment');
         } else if (lastVote === 'decrement') {
-            dispatch(incrementVoteRate({ articleId }));
+            dispatch(incrementArticleVoteRate({ articleId }));
             setLastVote(null);
         }
        
@@ -21,10 +21,10 @@ export const VoteRate = (props) => {
     
       const handleDecrement = () => {
         if (lastVote === null) {
-            dispatch(decrementVoteRate({ articleId }));
+            dispatch(decrementArticleVoteRate({ articleId }));
             setLastVote('decrement')
         } else if (lastVote === 'increment') {
-            dispatch(decrementVoteRate({ articleId }));
+            dispatch(decrementArticleVoteRate({ articleId }));
             setLastVote(null)
         }
         

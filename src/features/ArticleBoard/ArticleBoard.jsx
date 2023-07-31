@@ -7,7 +7,6 @@ export const ArticleBoard = () => {
     
     const articles = useSelector(selectAllArticles);
 
-
     
 
 
@@ -17,7 +16,8 @@ export const ArticleBoard = () => {
             {articles.map((article) => {
                 return <Article
                          articleId={article.id}
-                         key={article.id} 
+                         key={article.id}
+                          
                  />
             })} 
         </>
