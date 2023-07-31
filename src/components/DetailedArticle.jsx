@@ -24,15 +24,18 @@ export const DetailedArticle = () => {
             <p>Posted by <span>{author}</span> - <span>{publishDate}</span></p>
             <img src={contentImg} alt="" />
             <ArticleVoteRate voteRate={voteRate} articleId={articleId} />
-            <p>{comNumber}</p>
             <p>{contentText}</p>
-            <div>{comments.map((comment) => {
-                return <div key={comment.id}>
-                            <Comment content={comment.content} author={comment.author}  />
-                            <CommentVoteRate articleId={articleId} commentId={comment.id} voteRate={comment.voteRate}  />
-                        </div>
-                })}
+            <div>
+                <p>{comNumber} comments on this article : </p>
+                <div>{comments.map((comment) => {
+                    return <div key={comment.id}>
+                                <Comment content={comment.content} author={comment.author}  />
+                                <CommentVoteRate articleId={articleId} commentId={comment.id} voteRate={comment.voteRate}  />
+                            </div>
+                    })}
+                </div>
             </div>
+            
         </>
         //
         

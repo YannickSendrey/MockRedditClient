@@ -125,7 +125,7 @@ export const articleBoardSlice = createSlice({
           const { articleId, commentId } = action.payload;
           const article = state.find((article) => article.id === articleId);
           if (article) {
-            const comments = article.comment;
+            const comments = article.comments;
             const comment = comments.find((comment) => comment.id === commentId)
             comment.voteRate ++;
           }
@@ -135,7 +135,7 @@ export const articleBoardSlice = createSlice({
           const { articleId, commentId } = action.payload;
           const article = state.find((article) => article.id === articleId);
           if (article) {
-            const comments = article.comment;
+            const comments = article.comments;
             const comment = comments.find((comment) => comment.id === commentId)
             comment.voteRate --;
           }

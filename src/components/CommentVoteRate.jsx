@@ -32,11 +32,11 @@ export const CommentVoteRate = (props) => {
       return (
         <div>
             <div>
-                <i>o_o</i>
+                <i onClick={handleIncrement}>o_o</i>
             </div>
             <p>{voteRate}</p>
             <div>
-                <i>u_u</i>
+                <i onClick={handleDecrement}>u_u</i>
             </div>
         </div>
       )
