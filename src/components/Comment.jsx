@@ -1,13 +1,14 @@
 import React from "react";
-
+import styles from '../css/DetailedArticle.module.css';
 
 export const Comment = (props) => {
     const { content, author } = props;
+    
 
     return (
-        <div>
-            <p>{content}</p>
-            <p>posted by {author}</p>
+        <div className={styles.comment__div}>
+            <p className={styles.comment__content}>{content}</p>
+            <p className={styles.comment__author}>Posted by <em>{author}</em></p>
         </div>
     )
 }

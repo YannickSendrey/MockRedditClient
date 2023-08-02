@@ -1,0 +1,155 @@
+.homeButton__div {
+    border: 4px solid rgba(23, 76, 87, 35%);
+    width: 80px;
+    border-radius: 10%;
+    margin-left: 5%;
+    background-color: rgba(21, 32, 43, 50%); ;
+}
+
+.homeButton__text {
+    text-align: center;
+}
+
+.voterate__container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+}
+
+.voterate__arrow {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding:4px;
+}
+
+.voterate__up {
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+.voterate__down {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.voterate__number {
+    font-size: 0.8em;
+    text-align: left;
+}
+
+
+.detailedArticle__section {
+    border-top: 2px solid rgba(23, 76, 87, 35%);
+    padding-top: 5%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+    width: 100%;
+}
+
+.detailedArticle__section__article {
+    display: flex;
+}
+
+.detailedArticle__content {
+    width: 100%;
+    margin-left: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.detailedArticle__h2 {
+    font-size: 1.5em;
+    text-align: center;
+    margin: 1em auto;
+}
+
+.detailedArticle__contentImg {
+    margin-bottom: 5%;
+    width: 90%;
+}
+
+.detailedArticle__contentText {
+    width: 90%;
+    margin-bottom: 15%;
+    color: gray;
+}
+
+.detailedArticle__moreInfos {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3%;
+    color: gray;
+    margin: 5% auto 3% auto;
+    text-align: left;
+}
+
+
+.detailedArticle__moreInfos__date {
+    font-style: italic;
+}
+
+.detailedArticle__moreInfos__author {
+    font-weight: bold;
+    font-style: italic;
+    color: green;
+}
+
+.detailedArticle__comment__section {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-left: 10%;
+}
+
+.detailedArticle__comment__number {
+    color: white;
+}
+
+.detailedArticle__comment__number em {
+    color: green;
+    font-weight: bold;
+}
+
+.detailedArticle__comment__container {
+    margin-top: 5%;
+}
+
+
+.detailedArticle__comment__div {
+    margin-bottom: 5%;
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+    gap: 5%;
+}
+
+.comment__div {
+    border: 4px solid rgba(23, 76, 87, 35%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 3%;
+    color: gray;
+}
+
+.comment__content {
+    font-size: 1.0em;
+    margin-bottom: 3%;
+}
+
+.comment__author {
+    font-size: 0.8em;
+}
+
+.comment__author em {
+    color: green;
+}

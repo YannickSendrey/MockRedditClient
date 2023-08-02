@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { incrementCommentVoteRate, decrementCommentVoteRate } from "../features/ArticleBoard/articleBoardSlice";
+import styles from '../css/DetailedArticle.module.css';
 
 export const CommentVoteRate = (props) => {
     const { articleId, commentId, voteRate } = props;
@@ -30,13 +31,13 @@ export const CommentVoteRate = (props) => {
       };
 
       return (
-        <div>
+        <div className={styles.voterate__container}>
             <div>
-                <i onClick={handleIncrement}>o_o</i>
+                <i className={`${styles.voterate__arrow} ${styles.voterate__up}`} onClick={handleIncrement}></i>
             </div>
-            <p>{voteRate}</p>
+            <p className={styles.voterate__number}>{voteRate}</p>
             <div>
-                <i onClick={handleDecrement}>u_u</i>
+                <i className={`${styles.voterate__arrow} ${styles.voterate__down}`} onClick={handleDecrement}></i>
             </div>
         </div>
       )
