@@ -6,6 +6,7 @@ import { ArticleVoteRate } from './ArticleVoteRate';
 import { HomeButton } from './HomeButton';
 import { CommentVoteRate } from './CommentVoteRate';
 import { Comment } from './Comment';
+import styles from '../css/DetailedArticle.module.css';
 
 
 export const DetailedArticle = () => {
@@ -17,14 +18,17 @@ export const DetailedArticle = () => {
 
 
     return (
-        // goBack component
-        <>  
+        <section className={styles.detailedArticle__section}>  
             <HomeButton />
-            <h2>{title}</h2>
-            <p>Posted by <span>{author}</span> - <span>{publishDate}</span></p>
-            <img src={contentImg} alt="" />
-            <ArticleVoteRate voteRate={voteRate} articleId={articleId} />
-            <p>{contentText}</p>
+            <div className={styles.detailedArticle__section__article}>
+                <div className={styles.detailedArticle__content}>
+                    <h2 className={styles.detailedArticle__h2}>{title}</h2>
+                    <p className={styles.detailedArticle__moreInfos}>Posted by <span className={styles.detailedArticle__moreInfos__author}>{author}</span> - <span className={styles.detailedArticle__moreInfos__date}>{publishDate}</span></p>
+                    <img className={styles.detailedArticle__contentImg} src={contentImg} alt="" />
+                    <p className={styles.detailedArticle__contentText}>{contentText}</p>
+                </div>
+                <ArticleVoteRate voteRate={voteRate} articleId={articleId} />
+            </div>
             <div>
                 <p>{comNumber} comments on this article : </p>
                 <div>{comments.map((comment) => {
@@ -35,8 +39,7 @@ export const DetailedArticle = () => {
                     })}
                 </div>
             </div>
-            
-        </>
+        </section>
         //
         
     )
