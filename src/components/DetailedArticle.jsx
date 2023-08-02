@@ -37,7 +37,7 @@ export const DetailedArticle = () => {
                                 <CommentVoteRate articleId={articleId} commentId={comment.id} voteRate={comment.voteRate}  />
                                
                             </div>
-                    })}
+                    })} 
                 </div>
             </div>
         </section>
