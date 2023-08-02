@@ -29,12 +29,13 @@ export const DetailedArticle = () => {
                 </div>
                 <ArticleVoteRate voteRate={voteRate} articleId={articleId} />
             </div>
-            <div>
-                <p>{comNumber} comments on this article : </p>
-                <div>{comments.map((comment) => {
-                    return <div key={comment.id}>
+            <div className={styles.detailedArticle__comment__section}>
+                <p className={styles.detailedArticle__comment__number}><em>{comNumber}</em> comments on this article : </p>
+                <div className={styles.detailedArticle__comment__container}>{comments.map((comment) => {
+                    return <div key={comment.id} className={styles.detailedArticle__comment__div}>
                                 <Comment content={comment.content} author={comment.author}  />
                                 <CommentVoteRate articleId={articleId} commentId={comment.id} voteRate={comment.voteRate}  />
+                               
                             </div>
                     })}
                 </div>

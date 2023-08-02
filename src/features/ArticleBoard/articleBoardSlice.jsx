@@ -9,7 +9,7 @@ const initialState = [
     contentText: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim est consectetur doloribus soluta! Omnis sit modi incidunt animi, saepe autem minus repellat sunt quisquam nulla facere quod magnam reiciendis ut blanditiis',
     author: 'Yannick',
     publishDate: '22/07/2023',
-    comNumber: Math.floor(Math.random() * 10),
+    comNumber: Math.floor(Math.random() * 30 + 5),
     comments: [
       {
         id: 1,
