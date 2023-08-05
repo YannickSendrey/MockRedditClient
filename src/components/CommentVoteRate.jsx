@@ -8,24 +8,44 @@ export const CommentVoteRate = (props) => {
     const [lastVote, setLastVote] = useState(null); // we want our user to be able to upVote/downVote only once per article
     const dispatch = useDispatch();
 
-    const handleIncrement = () => {
+    const handleIncrement = ({ target }) => {
         if (lastVote === null) {
             dispatch(incrementCommentVoteRate({ articleId, commentId }));
             setLastVote('increment');
+            target.style.border = 'solid green';
+            target.style.borderWidth = '0 3px 3px 0';
         } else if (lastVote === 'decrement') {
             dispatch(incrementCommentVoteRate({ articleId, commentId }));
             setLastVote(null);
+            target.style.border = 'solid white';
+            target.style.borderWidth = '0 3px 3px 0';
+
+            // we select the downRate <i> to change its bg-color back to white
+            const parentDiv = target.closest(`.${styles.voterate__container}`);
+            const downArrow = parentDiv.querySelector(`.${styles.voterate__arrow}:not(.${styles.voterate__up})`);
+            downArrow.style.border = 'solid white';
+            downArrow.style.borderWidth = '0 3px 3px 0';
         }
        
       };
     
-      const handleDecrement = () => {
+      const handleDecrement = ({ target }) => {
         if (lastVote === null) {
             dispatch(decrementCommentVoteRate({ articleId, commentId }));
             setLastVote('decrement')
+            target.style.border = 'solid red';
+            target.style.borderWidth = '0 3px 3px 0';
         } else if (lastVote === 'increment') {
             dispatch(decrementCommentVoteRate({ articleId, commentId }));
             setLastVote(null)
+            target.style.border = 'solid white';
+            target.style.borderWidth = '0 3px 3px 0';
+
+            // same as before with upRate <i>
+            const parentDiv = target.closest(`.${styles.voterate__container}`);
+            const upArrow = parentDiv.querySelector(`.${styles.voterate__arrow}:not(.${styles.voterate__down})`);
+            upArrow.style.border = 'solid white';
+            upArrow.style.borderWidth = '0 3px 3px 0';
         }
         
       };

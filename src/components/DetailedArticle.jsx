@@ -24,7 +24,10 @@ export const DetailedArticle = () => {
                 <div className={styles.detailedArticle__content}>
                     <h2 className={styles.detailedArticle__h2}>{title}</h2>
                     <p className={styles.detailedArticle__moreInfos}>Posted by <span className={styles.detailedArticle__moreInfos__author}>{author}</span> - <span className={styles.detailedArticle__moreInfos__date}>{publishDate}</span></p>
-                    <img className={styles.detailedArticle__contentImg} src={contentImg} alt="" />
+                    <div className={styles.detailedArticle__contentImgWrapper}>
+                        <img className={styles.detailedArticle__contentImg} src={contentImg} alt="" />
+                    </div>
+                    
                     <p className={styles.detailedArticle__contentText}>{contentText}</p>
                 </div>
                 <ArticleVoteRate voteRate={voteRate} articleId={articleId} />
@@ -37,7 +40,7 @@ export const DetailedArticle = () => {
                                 <CommentVoteRate articleId={articleId} commentId={comment.id} voteRate={comment.voteRate}  />
                                
                             </div>
-                    })}
+                    })} 
                 </div>
             </div>
         </section>
