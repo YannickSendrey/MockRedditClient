@@ -1,52 +1,73 @@
 @media all and (max-width: 849px) {
 
-.header {
-    gap: 10px;
-}
+    .header {
+        gap: 10px;
+    }
 
-.header__input {
-    width: 75%;
-    height: 2.2em;
-}
+    .header__form {
+        width: 65%;
+        height: 2.2em;
+    }
 
-.header__h1 {
-    font-size: 1.7em;
-}
+    .header__h1 {
+        font-size: 1.7em;
+    }
+
+    .arrow {
+        padding: 5px;
+    }
 
 }
 
 @media all and (min-width: 850px) {
 
-.header {
-    gap: 15px;
-}
+    .header {
+        gap: 15px;
+    }
+        
+
+    .header__form {
+        width: 70%;
+        height: 3.5em;
+    }
+
+
+    .header__h1 {
+        font-size: 2em;
+    }
     
+    input::placeholder, .header__input {
+        font-size: 1.2em;
+    }
 
-.header__input {
-    width: 85%;
-    height: 3.5em;
-}
-
-.header__h1 {
-    font-size: 2em;
-}
+    .arrow {
+        padding: 6px;
+    }
 
 }
 
 @media all and (min-width: 1650px) {
 
-.header {
-    gap: 25px;
-}
+    .header {
+        gap: 25px;
+    }
 
-.header__input {
-    width: 65%;
-    height: 5em;
-}
- 
-.header__h1 {
-    font-size: 2.3em;
-}    
+    .header__form {
+        width: 60%;
+        height: 5em;
+    }
+    
+    .header__h1 {
+        font-size: 2.3em;
+    }    
+
+    input::placeholder, .header__input {
+        font-size: 1.4em;
+    }
+
+    .arrow {
+        padding: 9px;
+    }
 
 }
 
@@ -72,18 +93,46 @@
     border-radius: 50%;
 }
 
-
-
-.header__input {
-    background-color: rgba(10, 91, 173, 0.176);
-    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
-    border: none;
-    border-radius: 4px;
+.header__form {
     margin-bottom: 7%;
     margin-right: 11.5%;
     margin-left: 13.5%;
+    border: none;
+    padding: 1px;
+    display: flex;
+    border-radius: 10px;
 }
 
-::placeholder {
+.header__input {
+    background-color: rgba(10, 91, 173, 0.176);
     color: rgba(146, 163, 198, 0.7);
+    padding-left: 3%;
+    padding-right: 3%;
+    height: 100%;
+    width: 90%;
+    border: none;
+}
+
+input::placeholder {
+    color: rgba(146, 163, 198, 0.7);
+}
+
+.header__button {
+    width: 10%;
+    border: none;
+    background-color: rgba(10, 91, 173, 0.176);
+}
+
+.header__button:hover {
+    cursor: pointer;
+    background-color: rgba(10, 91, 173, 0.4);
+}
+
+.arrow {
+    border: solid rgba(146, 163, 198, 0.7);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    -webkit-transform: rotate(-50deg);
+    transform: rotate(-50deg);
+    margin-right: 3%;
 }
