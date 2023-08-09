@@ -92,6 +92,21 @@ const initialState = [
         author: 'yes'
       }
    ]
+  },
+
+  {
+    id: 4,
+    title: 'ayes',
+  },
+
+  {
+    id: 5,
+    title: 'testa'
+  },
+
+  {
+    id: 6,
+    title: 'aaaaaaaa'
   }
 ]
 
