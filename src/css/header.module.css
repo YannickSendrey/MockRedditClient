@@ -4,14 +4,13 @@
         gap: 10px;
     }
 
-    .header__form {
-        width: 90%;
-        height: 2.2em;
+    .searchInput__form {
+        width: 75%;
+        height: 5em;
     }
 
-    .header__container {
-        width: 100%;
-        height: 2.2em;
+    .searchResults__link {
+        font-size: 0.9em;
     }
 
     .header__h1 {
@@ -32,14 +31,13 @@
     }
         
 
-    .header__form {
-        width: 90%;
-        height: 3.5em;
+    .searchInput__form {
+        width: 80%;
+        height: 10em;
     }
 
-    .header__container {
-        width: 100%;
-        height: 3.2em;
+    .searchResults__link {
+        font-size: 1.4em;
     }
 
 
@@ -47,7 +45,7 @@
         font-size: 2em;
     }
     
-    input::placeholder, .header__input {
+    input::placeholder, .searchInput__input {
         font-size: 1.2em;
     }
 
@@ -57,27 +55,26 @@
 
 }
 
-@media all and (min-width: 1650px) {
+@media all and (min-width: 1500px) {
 
     .header {
         gap: 25px;
     }
 
-    .header__form {
+    .searchInput__form {
         width: 60%;
-        height: 5em;
+        height: 11em;
     }
 
-    .header__container {
-        width: 75%;
-        height: 4.2em;
+    .searchResults__link {
+        font-size: 1.6em;
     }
-    
+
     .header__h1 {
         font-size: 2.3em;
     }    
 
-    input::placeholder, .header__input {
+    input::placeholder, .searchInput__input {
         font-size: 1.4em;
     }
 
@@ -103,54 +100,66 @@
     align-items: center;
     gap: 10px;
 }
+.header__h1:hover {
+    cursor: pointer;
+}
 
 .header__img {
     background-color: rgba(2, 154, 255, 0.141);
     border-radius: 50%;
 }
 
-.header__form {
+.searchInput__form {
     margin-bottom: 7%;
     margin-right: 11.5%;
     margin-left: 13.5%;
     border: none;
-    padding: 1px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
-.header__container {
-    display: flex;
-    margin-right: 11.5%;
-    margin-left: 13.5%;
-}
 
-.header__input {
+.searchInput__input {
     background-color: rgba(10, 91, 173, 0.176);
     color: rgba(146, 163, 198, 0.7);
     padding-left: 3%;
     padding-right: 3%;
-    height: 100%;
     width: 90%;
     border: none;
+    height: 70%;
 }
 
 input::placeholder {
     color: rgba(146, 163, 198, 0.7);
 }
 
-.header__button {
-    width: 10%;
-    border: none;
-    background-color: rgba(10, 91, 173, 0.176);
+.searchInput__searchResults {
+    margin-top: 1px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    height: 30%;
 }
 
-.header__button:hover {
+
+.searchResults__link {
+    width: 100%;
+    text-decoration: none;
+    color: rgba(146, 163, 198, 0.7);
+    text-align: center;
+    background-color: rgba(10, 91, 173, 0.176);
+
+}
+
+.searchResults__link:hover {
     cursor: pointer;
     background-color: rgba(10, 91, 173, 0.4);
+
 }
+
+
 
 .arrow {
     border: solid rgba(146, 163, 198, 0.7);

@@ -7,17 +7,36 @@ export const ArticleBoard = () => {
     
     const articles = useSelector(selectAllArticles);
 
+    // custom way to get 3 random articles using Fisher-Yates sorting algorithm
+    const idsArray = articles.map((article) => {
+        return article.id
+    });
+
+    const shuffle = (array) => { 
+        for (let i = array.length - 1; i > 0; i--) { 
+          const j = Math.floor(Math.random() * (i + 1)); 
+          [array[i], array[j]] = [array[j], array[i]]; 
+        } 
+        return array; 
+      }; 
+
+    shuffle(idsArray);
+    const ids = idsArray.slice(0, 3);
+
+    const randomArticles = articles.filter((article) => {
+        return ids.find(id => id === article.id);
+    })
+    //
+
+
     
-
-
     return (
-        // foreach article -> un article en gros, tu lui passes toutes ses données en prop ? 
         <>
-            {articles.map((article) => {
+            {randomArticles.slice(0, 3).map((article) => {
+                // only want to render 3 random articles on homePage
                 return <Article
                          articleId={article.id}
                          key={article.id}
-                          
                  />
             })} 
         </>
@@ -25,15 +44,3 @@ export const ArticleBoard = () => {
 }
 
 
-
-/*
-[
-    {
-        id: number,
-        title: string,
-        voteRate: number, another component
-        author: string,
-        publishDate: date/number,
-        comNumber: number (math.random)
-    }
-] */
