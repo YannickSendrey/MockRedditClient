@@ -15,7 +15,7 @@ export const Header = () => {
         <>
             <header className={styles.header}>
                 <div className={styles.header__div}>
-                    <img className={styles.header__img} src="src/assets/reddit-logo.svg" alt="Reddit Logo" width="50px" height="50px" />
+                    <img className={styles.header__img} src="/src/assets/reddit-logo.svg" alt="Reddit Logo" width="50px" height="50px" />
                     <h1 className={styles.header__h1} onClick={goHome}>Mock Reddit Client</h1>
                 </div>
                 <SearchInput />
