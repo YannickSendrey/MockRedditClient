@@ -167,7 +167,7 @@
 }
 
 .article__h2:hover {
-    color: green;
+    color: lightgray;
     cursor: pointer;
 }
 
