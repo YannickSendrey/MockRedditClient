@@ -135,7 +135,7 @@ input::placeholder {
 }
 
 .searchInput__searchResults {
-    margin-top: 1px;
+    margin-top: 2px;
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -145,6 +145,7 @@ input::placeholder {
 
 
 .searchResults__link {
+    margin-bottom: 1px;
     width: 100%;
     text-decoration: none;
     color: rgba(146, 163, 198, 0.7);

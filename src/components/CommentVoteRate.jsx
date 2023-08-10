@@ -5,7 +5,7 @@ import styles from '../css/DetailedArticle.module.css';
 
 export const CommentVoteRate = (props) => {
     const { articleId, commentId, voteRate } = props;
-    const [lastVote, setLastVote] = useState(null); // we want our user to be able to upVote/downVote only once per article
+    const [lastVote, setLastVote] = useState(null);  // component state to be sure our user can only upvote/downvote once per comment
     const dispatch = useDispatch();
 
     const handleIncrement = ({ target }) => {
@@ -20,7 +20,7 @@ export const CommentVoteRate = (props) => {
             target.style.border = 'solid white';
             target.style.borderWidth = '0 3px 3px 0';
 
-            // we select the downRate <i> to change its bg-color back to white
+            // select the downRate <i> to change its bg-color back to white
             const parentDiv = target.closest(`.${styles.voterate__container}`);
             const downArrow = parentDiv.querySelector(`.${styles.voterate__arrow}:not(.${styles.voterate__up})`);
             downArrow.style.border = 'solid white';
@@ -55,7 +55,9 @@ export const CommentVoteRate = (props) => {
             <div>
                 <i className={`${styles.voterate__arrow} ${styles.voterate__up}`} onClick={handleIncrement}></i>
             </div>
+
             <p className={styles.voterate__number}>{voteRate}</p>
+            
             <div>
                 <i className={`${styles.voterate__arrow} ${styles.voterate__down}`} onClick={handleDecrement}></i>
             </div>

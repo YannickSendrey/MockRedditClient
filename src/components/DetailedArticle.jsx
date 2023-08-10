@@ -6,10 +6,11 @@ import { ArticleVoteRate } from './ArticleVoteRate';
 import { HomeButton } from './HomeButton';
 import { CommentVoteRate } from './CommentVoteRate';
 import { Comment } from './Comment';
-import styles from '../css/DetailedArticle.module.css';
+import styles from '../css/detailedArticle.module.css';
 
 
 export const DetailedArticle = () => {
+    // get the dynamic param from URL then find the right article and extract his infos
     const { id } = useParams();
     const articleId = Number(id);
     const articles = useSelector(selectAllArticles);
@@ -19,6 +20,7 @@ export const DetailedArticle = () => {
 
     return (
         <section className={styles.detailedArticle__section}>  
+        
             <HomeButton />
             <div className={styles.detailedArticle__section__article}>
                 <div className={styles.detailedArticle__content}>
@@ -27,24 +29,24 @@ export const DetailedArticle = () => {
                     <div className={styles.detailedArticle__contentImgWrapper}>
                         <img className={styles.detailedArticle__contentImg} src={contentImg} alt="" />
                     </div>
-                    
                     <p className={styles.detailedArticle__contentText}>{contentText}</p>
                 </div>
                 <ArticleVoteRate voteRate={voteRate} articleId={articleId} />
             </div>
+
             <div className={styles.detailedArticle__comment__section}>
                 <p className={styles.detailedArticle__comment__number}><em>{comNumber}</em> comments on this article : </p>
                 <div className={styles.detailedArticle__comment__container}>{comments.map((comment) => {
                     return <div key={comment.id} className={styles.detailedArticle__comment__div}>
                                 <Comment content={comment.content} author={comment.author}  />
                                 <CommentVoteRate articleId={articleId} commentId={comment.id} voteRate={comment.voteRate}  />
-                               
                             </div>
                     })} 
                 </div>
             </div>
+
         </section>
-        //
+
         
     )
 }

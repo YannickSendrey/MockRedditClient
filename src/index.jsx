@@ -7,9 +7,7 @@ import store from './app/store.jsx';
 import {
   createBrowserRouter,
   RouterProvider as Router,
-  Route,
-  Link,
-  Outlet
+  Route
 } from "react-router-dom";
 import { createRoutesFromElements } from 'react-router-dom';
 import { DetailedArticle } from './components/DetailedArticle.jsx';
