@@ -16,8 +16,8 @@ export const SearchInput = () => {
     const filteredArticles = articles.filter((article) => {
         const title = article['title'].toLowerCase();
         const inputValue = value.toLowerCase();
+        // check only when user type atlease 4 characters
         if (inputValue.length >= 4) {
-            // we want to check when user type atlease 4 characters
             return title.includes(inputValue); 
         }
     })
@@ -26,6 +26,7 @@ export const SearchInput = () => {
         dispatch(addInput(target.value));
     }
 
+    // empty our input field when we click on SearchResults (our redirection component)
     const handleClick = () => {
         dispatch(addInput(''));
     }
@@ -36,8 +37,8 @@ export const SearchInput = () => {
             <input type="text" placeholder='Search MockReddit' className={styles.searchInput__input} 
             onChange={handleChange} value={value}   />
             <div className={styles.searchInput__searchResults}>
+                {/* render the 3 first of our filteredArticles array */}
                 {filteredArticles.slice(0, 3).map((article) => {
-                // We only want to render the 3 first of our filteredArticles array. Design choice 
                         return <SearchResults key={article.id} articleId={article.id} handleClick={handleClick}/>
                 })}
             </div>

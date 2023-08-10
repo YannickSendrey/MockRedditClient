@@ -20,9 +20,9 @@ export const Header = () => {
                 </div>
                 <SearchInput />
             </header>
+            {/* outlet is used in react-router to display the rest of our page below our header */}
             <Outlet />
         </>
     )
-    // + search component + maybe light/dark mode button
 }
 

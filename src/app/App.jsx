@@ -7,9 +7,9 @@ function App() {
   
 
   return (
-    <>
+    <main>
       <ArticleBoard />
-    </>
+    </main>
     
   )
 }

@@ -8,9 +8,10 @@ export const SearchResults = (props) => {
     const { articleId, handleClick } = props;
     const articles = useSelector(selectAllArticles);
     const article = articles.find((article) => article.id === articleId);
-    const { id, title, contentImg } = article;
+    const { id, title} = article;
+    const articleTitle = title.toLowerCase();
 
     return (
-            <Link to={'/' + id} onClick={handleClick} className={styles.searchResults__link}>{title}</Link>
+            <Link to={'/' + id} onClick={handleClick} className={styles.searchResults__link}>{articleTitle}</Link>
     )
 }

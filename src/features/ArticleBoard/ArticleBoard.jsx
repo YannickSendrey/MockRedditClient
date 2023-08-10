@@ -33,7 +33,7 @@ export const ArticleBoard = () => {
     return (
         <>
             {randomArticles.slice(0, 3).map((article) => {
-                // only want to render 3 random articles on homePage
+                // render 3 random articles on homePage
                 return <Article
                          articleId={article.id}
                          key={article.id}
