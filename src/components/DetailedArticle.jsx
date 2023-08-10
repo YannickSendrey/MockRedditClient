@@ -6,7 +6,7 @@ import { ArticleVoteRate } from './ArticleVoteRate';
 import { HomeButton } from './HomeButton';
 import { CommentVoteRate } from './CommentVoteRate';
 import { Comment } from './Comment';
-import styles from '../css/DetailedArticle.module.css';
+import styles from '../css/detailedArticle.module.css';
 
 
 export const DetailedArticle = () => {
