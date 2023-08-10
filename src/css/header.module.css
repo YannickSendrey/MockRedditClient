@@ -94,6 +94,10 @@
     
 }
 
+.header__img:hover {
+    cursor: pointer;
+}
+
 .header__div {
     display: flex;
     justify-content: center;
