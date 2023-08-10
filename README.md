@@ -1,3 +1,2 @@
-# MockRedditClient
 
 WIP
