@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { incrementCommentVoteRate, decrementCommentVoteRate } from "../features/ArticleBoard/articleBoardSlice";
-import styles from '../css/DetailedArticle.module.css';
+import styles from '../css/detailedArticle.module.css';
 
 export const CommentVoteRate = (props) => {
     const { articleId, commentId, voteRate } = props;

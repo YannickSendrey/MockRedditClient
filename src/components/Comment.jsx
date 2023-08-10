@@ -1,5 +1,5 @@
 import React from "react";
-import styles from '../css/DetailedArticle.module.css';
+import styles from '../css/detailedArticle.module.css';
 
 export const Comment = (props) => {
     const { content, author } = props;

@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import styles from '../css/DetailedArticle.module.css';
+import styles from '../css/detailedArticle.module.css';
 
 export const HomeButton = () => {
     const navigate = useNavigate();
