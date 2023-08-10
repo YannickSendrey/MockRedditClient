@@ -16,8 +16,8 @@ export const SearchInput = () => {
     const filteredArticles = articles.filter((article) => {
         const title = article['title'].toLowerCase();
         const inputValue = value.toLowerCase();
-        // check only when user type atlease 4 characters
-        if (inputValue.length >= 4) {
+        // check only when user type atlease 2 characters
+        if (inputValue.length >= 2) {
             return title.includes(inputValue); 
         }
     })
