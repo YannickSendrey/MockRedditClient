@@ -2,7 +2,7 @@
 
 ## Introduction
 
-I made this small project following CodeCademy Full-Stack Engineer carreer path. 
+I made this small project following CodeCademy Full-Stack Engineer career path. 
 
 It is my first practical project, especially using technologies such as React, Redux & utilites like React-router.
 
