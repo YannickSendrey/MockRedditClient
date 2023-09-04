@@ -18,6 +18,15 @@ export const Article = ( { articleId }) => {
         let path = '/' + id; 
         navigate(path);
       }
+    
+    // article text length max 100 on homepage
+    const truncateArticle = (article) => {
+        if (article.length <= 100) {
+            return article
+        } else {
+            return article.slice(0, 100) + '...';
+        }
+    }
 
     return (
         <section className={styles.article__section}>
@@ -28,7 +37,7 @@ export const Article = ( { articleId }) => {
                 <div className={styles.article__contentImgWrapper}>
                     <img onClick={goToArticle} className={styles.article__contentImg} src={contentImg} alt={alt} />
                 </div>
-                <p className={styles.article__contentText}>{contentText}</p>
+                <p className={styles.article__contentText}>{truncateArticle(contentText)}</p>
                 
                 <div className={styles.article__moreInfos}>
                     <p className={styles.article__moreInfos__author}>posted by <span className={styles.article__moreInfos__author_name}>{author}</span></p>
