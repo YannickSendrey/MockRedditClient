@@ -21,10 +21,10 @@ export const Article = ( { articleId }) => {
     
     // article text length max 100 on homepage
     const truncateArticle = (article) => {
-        if (article.length <= 100) {
+        if (article.length <= 300) {
             return article
         } else {
-            return article.slice(0, 100) + '...';
+            return article.slice(0, 300) + '...';
         }
     }
 
