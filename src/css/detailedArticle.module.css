@@ -293,3 +293,7 @@
 .comment__author em {
     color: green;
 }
+
+.voterate__arrow:hover {
+    cursor: pointer;
+}
